@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>总览 · 应急管理系统</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+</head>
+<body class="app-shell">
+  <header class="app-topbar text-white flex items-center justify-between px-6">
+    <div class="flex items-center gap-3">
+      <i class="fa-solid fa-shield-halved text-xl"></i>
+      <span class="font-semibold">应急管理系统</span>
+    </div>
+    <nav class="hidden md:flex items-center gap-5 text-sm text-white/90">
+      <a href="dashboard.html" target="_parent" class="hover:text-white">总览</a>
+      <a href="contracts.html" target="_parent" class="hover:text-white">合同</a>
+      <a href="portal-business.html" target="_parent" class="hover:text-white">门户</a>
+      <a href="settings.html" target="_parent" class="hover:text-white">设置</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <button class="relative">
+        <i class="fa-regular fa-bell"></i>
+        <span class="absolute -top-2 -right-2 bg-red-500 text-xs rounded-full px-1">3</span>
+      </button>
+      <img src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=64&auto=format&fit=crop" class="w-9 h-9 rounded-full object-cover" alt="avatar" />
+    </div>
+  </header>
+  <main class="app-content p-6 space-y-6">
+    <section class="grid lg:grid-cols-3 gap-6">
+      <div class="card bg-white p-5">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">事件趋势</h3>
+          <i class="fa-solid fa-arrow-trend-up text-blue-600"></i>
+        </div>
+        <img class="mt-4 w-full h-40 object-cover rounded" src="https://images.unsplash.com/photo-1551281044-8a5d0d8d1f05?q=80&w=1200&auto=format&fit=crop" alt="chart" />
+      </div>
+      <div class="card bg-white p-5">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">合同金额分布</h3>
+          <i class="fa-solid fa-chart-pie text-indigo-600"></i>
+        </div>
+        <img class="mt-4 w-full h-40 object-cover rounded" src="https://images.unsplash.com/photo-1551281044-8d8d1f0d5a90?q=80&w=1200&auto=format&fit=crop" alt="chart2" />
+      </div>
+      <div class="card bg-white p-5">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">预案覆盖</h3>
+          <i class="fa-solid fa-shield-halved text-emerald-600"></i>
+        </div>
+        <img class="mt-4 w-full h-40 object-cover rounded" src="https://images.unsplash.com/photo-1530207611141-d7c4f63a0131?q=80&w=1200&auto=format&fit=crop" alt="chart3" />
+      </div>
+    </section>
+
+    <section class="grid lg:grid-cols-2 gap-6">
+      <div class="card bg-white p-5">
+        <h3 class="font-semibold">重点合同</h3>
+        <ul class="mt-4 divide-y">
+          <li class="py-3 flex items-center justify-between">
+            <div>
+              <div class="font-medium">应急物资采购框架协议</div>
+              <div class="text-sm text-gray-500">供应商：华安实业 · 金额：¥ 12,500,000</div>
+            </div>
+            <span class="px-2 py-1 text-xs rounded bg-blue-50 text-blue-700">在签</span>
+          </li>
+          <li class="py-3 flex items-center justify-between">
+            <div>
+              <div class="font-medium">救援服务外包协议</div>
+              <div class="text-sm text-gray-500">供应商：安迅救援 · 金额：¥ 3,800,000</div>
+            </div>
+            <span class="px-2 py-1 text-xs rounded bg-yellow-50 text-yellow-700">法务审核</span>
+          </li>
+          <li class="py-3 flex items-center justify-between">
+            <div>
+              <div class="font-medium">应急指挥平台运维合同</div>
+              <div class="text-sm text-gray-500">供应商：科创云 · 金额：¥ 1,200,000</div>
+            </div>
+            <span class="px-2 py-1 text-xs rounded bg-green-50 text-green-700">已生效</span>
+          </li>
+        </ul>
+      </div>
+      <div class="card bg-white p-5">
+        <h3 class="font-semibold">风险预警</h3>
+        <div class="mt-4 grid grid-cols-3 gap-4">
+          <div class="p-4 rounded bg-red-50 text-red-700">
+            <div class="text-sm">逾期付款</div>
+            <div class="text-2xl font-semibold">5</div>
+          </div>
+          <div class="p-4 rounded bg-orange-50 text-orange-700">
+            <div class="text-sm">合同到期</div>
+            <div class="text-2xl font-semibold">7</div>
+          </div>
+          <div class="p-4 rounded bg-yellow-50 text-yellow-700">
+            <div class="text-sm">条款异常</div>
+            <div class="text-2xl font-semibold">3</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

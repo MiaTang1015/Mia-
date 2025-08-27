@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>法务门户 · 应急管理系统</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+</head>
+<body class="app-shell">
+  <header class="app-topbar text-white flex items-center justify-between px-6">
+    <div class="flex items中心 gap-3">
+      <i class="fa-solid fa-shield-halved text-xl"></i>
+      <span class="font-semibold">应急管理系统</span>
+    </div>
+    <nav class="hidden md:flex items-center gap-5 text-sm text白/90">
+      <a href="dashboard.html" target="_parent" class="hover:text-white">总览</a>
+      <a href="contracts.html" target="_parent" class="hover:text-white">合同</a>
+      <a href="portal-business.html" target="_parent" class="hover:text-white">门户</a>
+      <a href="settings.html" target="_parent" class="hover:text-white">设置</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <button class="relative">
+        <i class="fa-regular fa-bell"></i>
+        <span class="absolute -top-2 -right-2 bg-red-500 text-xs rounded-full px-1">3</span>
+      </button>
+      <img src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=64&auto=format&fit=crop" class="w-9 h-9 rounded-full object-cover" alt="avatar" />
+    </div>
+  </header>
+  <main class="app-content p-6 space-y-6">
+    <section class="grid lg:grid-cols-3 gap-6">
+      <div class="card bg-white p-5">
+        <div class="text-sm text-gray-500">待审合同</div>
+        <div class="text-2xl font-semibold">8</div>
+      </div>
+      <div class="card bg-white p-5">
+        <div class="text-sm text-gray-500">已出具意见</div>
+        <div class="text-2xl font-semibold">21</div>
+      </div>
+      <div class="card bg-white p-5">
+        <div class="text-sm text-gray-500">风险提示</div>
+        <div class="text-2xl font-semibold">3</div>
+      </div>
+    </section>
+    <section class="card bg-white p-5">
+      <h3 class="font-semibold">审核工作台</h3>
+      <ul class="mt-4 divide-y">
+        <li class="py-3 flex items-center justify-between">
+          <div>
+            <div class="font-medium">救援服务外包协议</div>
+            <div class="text-sm text-gray-500">重点关注：赔偿条款、不可抗力</div>
+          </div>
+          <div class="flex gap-2">
+            <button class="px-3 py-1 rounded border">退回修改</button>
+            <button class="btn-primary px-3 py-1 rounded">通过</button>
+          </div>
+        </li>
+        <li class="py-3 flex items-center justify-between">
+          <div>
+            <div class="font-medium">物资采购框架协议补充</div>
+            <div class="text-sm text-gray-500">重点关注：价格调整、交付 SLA</div>
+          </div>
+          <div class="flex gap-2">
+            <button class="px-3 py-1 rounded border">退回修改</button>
+            <button class="btn-primary px-3 py-1 rounded">通过</button>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
