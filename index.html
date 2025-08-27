@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>应急管理系统 · 高保真原型</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    html, body { height: 100%; }
+    .screen-mock { width: 1440px; height: 900px; }
+    .pane { box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-radius: 12px; overflow: hidden; }
+    .pane header { background: linear-gradient(135deg,#0ea5e9,#2563eb); }
+    iframe { width: 100%; height: 100%; border: 0; }
+  </style>
+  <script>
+    function setSrc(id, src) {
+      const el = document.getElementById(id);
+      if (el && el.src !== src) el.src = src;
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      const pages = [
+        ['home', 'home.html'],
+        ['dashboard', 'dashboard.html'],
+        ['contracts', 'contracts.html'],
+        ['contract-detail', 'contract-detail.html'],
+        ['profile', 'profile.html'],
+        ['settings', 'settings.html'],
+        ['login', 'login.html'],
+        ['portal-finance', 'portal-finance.html'],
+        ['portal-legal', 'portal-legal.html'],
+        ['portal-business', 'portal-business.html'],
+        ['portal-admin', 'portal-admin.html']
+      ];
+      pages.forEach(([id, src]) => setSrc(id, src));
+    });
+  </script>
+  <link rel="preconnect" href="https://images.unsplash.com" />
+</head>
+<body class="min-h-screen bg-gray-50">
+  <div class="max-w-screen-2xl mx-auto p-6 space-y-8">
+    <div class="flex items-center justify-between">
+      <h1 class="text-2xl font-semibold text-gray-800">应急管理系统 · 高保真原型</h1>
+      <div class="text-sm text-gray-500">以 iframe 平铺所有页面，便于对照评审</div>
+    </div>
+
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+      <section class="pane bg-white">
+        <header class="px-4 py-3 text-white flex items-center gap-3">
+          <i class="fa-solid fa-house"></i>
+          <span class="font-medium">Home · 首页</span>
+        </header>
+        <div class="screen-mock">
+          <iframe id="home" title="home"></iframe>
+        </div>
+      </section>
+
+      <section class="pane bg-white">
+        <header class="px-4 py-3 text-white flex items-center gap-3">
+          <i class="fa-solid fa-chart-line"></i>
+          <span class="font-medium">Dashboard · 总览</span>
+        </header>
+        <div class="screen-mock">
+          <iframe id="dashboard" title="dashboard"></iframe>
+        </div>
+      </section>
+
+      <section class="pane bg-white">
+        <header class="px-4 py-3 text-white flex items-center gap-3">
+          <i class="fa-solid fa-file-signature"></i>
+          <span class="font-medium">Contracts · 合同</span>
+        </header>
+        <div class="screen-mock">
+          <iframe id="contracts" title="contracts"></iframe>
+        </div>
+      </section>
+
+      <section class="pane bg-white">
+        <header class="px-4 py-3 text-white flex items-center gap-3">
+          <i class="fa-solid fa-file-circle-check"></i>
+          <span class="font-medium">Contract Detail · 合同详情</span>
+        </header>
+        <div class="screen-mock">
+          <iframe id="contract-detail" title="contract-detail"></iframe>
+        </div>
+      </section>
+
+      <section class="pane bg-white">
+        <header class="px-4 py-3 text-white flex items-center gap-3">
+          <i class="fa-solid fa-user"></i>
+          <span class="font-medium">Profile · 个人中心</span>
+        </header>
+        <div class="screen-mock">
+          <iframe id="profile" title="profile"></iframe>
+        </div>
+      </section>
+
+      <section class="pane bg-white">
+        <header class="px-4 py-3 text-white flex items-center gap-3">
+          <i class="fa-solid fa-gear"></i>
+          <span class="font-medium">Settings · 设置</span>
+        </header>
+        <div class="screen-mock">
+          <iframe id="settings" title="settings"></iframe>
+        </div>
+      </section>
+
+      <section class="pane bg-white">
+        <header class="px-4 py-3 text-white flex items-center gap-3">
+          <i class="fa-solid fa-right-to-bracket"></i>
+          <span class="font-medium">Login · 登录</span>
+        </header>
+        <div class="screen-mock">
+          <iframe id="login" title="login"></iframe>
+        </div>
+      </section>
+
+      <section class="pane bg-white">
+        <header class="px-4 py-3 text-white flex items-center gap-3">
+          <i class="fa-solid fa-coins"></i>
+          <span class="font-medium">Finance Portal · 财务门户</span>
+        </header>
+        <div class="screen-mock">
+          <iframe id="portal-finance" title="portal-finance"></iframe>
+        </div>
+      </section>
+
+      <section class="pane bg-white">
+        <header class="px-4 py-3 text-white flex items-center gap-3">
+          <i class="fa-solid fa-scale-balanced"></i>
+          <span class="font-medium">Legal Portal · 法务门户</span>
+        </header>
+        <div class="screen-mock">
+          <iframe id="portal-legal" title="portal-legal"></iframe>
+        </div>
+      </section>
+
+      <section class="pane bg-white">
+        <header class="px-4 py-3 text-white flex items-center gap-3">
+          <i class="fa-solid fa-briefcase"></i>
+          <span class="font-medium">Business Portal · 业务门户</span>
+        </header>
+        <div class="screen-mock">
+          <iframe id="portal-business" title="portal-business"></iframe>
+        </div>
+      </section>
+
+      <section class="pane bg-white">
+        <header class="px-4 py-3 text-white flex items-center gap-3">
+          <i class="fa-solid fa-user-tie"></i>
+          <span class="font-medium">Admin Portal · 管理者门户</span>
+        </header>
+        <div class="screen-mock">
+          <iframe id="portal-admin" title="portal-admin"></iframe>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
+
