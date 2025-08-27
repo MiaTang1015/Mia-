@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>应急管理系统 · 合并预览</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    .screen { width: 1440px; height: auto; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+    .section-title { background: linear-gradient(135deg,#0ea5e9,#2563eb); color: #fff; }
+  </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+  <div class="max-w-screen-2xl mx-auto p-6 space-y-8">
+    <div class="flex items-center justify-between">
+      <h1 class="text-2xl font-semibold text-gray-800">应急管理系统 · 合并预览</h1>
+      <div class="text-sm text-gray-500">将各页面主要内容合并于单页展示</div>
+    </div>
+
+    <!-- 首页 -->
+    <section class="screen bg-white">
+      <div class="section-title px-4 py-3 flex items-center gap-3"><i class="fa-solid fa-house"></i><span>Home · 首页</span></div>
+      <div class="app-shell" style="height:auto">
+        <header class="app-topbar text-white flex items-center justify-between px-6">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-shield-halved text-xl"></i>
+            <span class="font-semibold">应急管理系统</span>
+          </div>
+          <div class="hidden md:flex items-center gap-5 text-sm text-white/90">
+            <span>总览</span><span>合同</span><span>门户</span><span>设置</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <i class="fa-regular fa-bell"></i>
+            <span class="w-9 h-9 rounded-full bg-white/20"></span>
+          </div>
+        </header>
+        <main class="app-content p-6 space-y-6">
+          <section class="card bg-white p-6 grid md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+              <h2 class="text-xl font-semibold text-gray-800">统一指挥 · 快速响应</h2>
+              <p class="text-gray-600">聚合事件、合同、资源与预案数据，提供跨部门协同能力。</p>
+              <div class="flex gap-3">
+                <a class="btn-primary px-4 py-2 rounded" href="#dashboard"><i class="fa-solid fa-chart-line mr-2"></i>进入总览</a>
+                <a class="px-4 py-2 rounded border border-gray-300" href="#contracts">查看合同</a>
+              </div>
+            </div>
+            <div>
+              <img class="w-full h-64 object-cover rounded" src="https://images.unsplash.com/photo-1535242208474-9a2793260ca0?q=80&w=1200&auto=format&fit=crop" alt="control room" />
+            </div>
+          </section>
+          <section class="grid md:grid-cols-4 gap-6">
+            <div class="card bg-white p-5"><div class="text-gray-500 text-sm">待办</div><div class="text-2xl font-semibold">12</div><div class="text-green-600 text-sm">较昨日 +2</div></div>
+            <div class="card bg-white p-5"><div class="text-gray-500 text-sm">在签合同</div><div class="text-2xl font-semibold">34</div><div class="text-blue-600 text-sm">较上周 +5</div></div>
+            <div class="card bg-white p-5"><div class="text-gray-500 text-sm">法务审核</div><div class="text-2xl font-semibold">8</div><div class="text-yellow-600 text-sm">待处理</div></div>
+            <div class="card bg-white p-5"><div class="text-gray-500 text-sm">风险预警</div><div class="text-2xl font-semibold">3</div><div class="text-red-600 text-sm">需关注</div></div>
+          </section>
+        </main>
+      </div>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard" class="screen bg-white">
+      <div class="section-title px-4 py-3 flex items-center gap-3"><i class="fa-solid fa-chart-line"></i><span>Dashboard · 总览</span></div>
+      <main class="p-6 space-y-6">
+        <section class="grid lg:grid-cols-3 gap-6">
+          <div class="card bg-white p-5"><div class="flex items-center justify-between"><h3 class="font-semibold">事件趋势</h3><i class="fa-solid fa-arrow-trend-up text-blue-600"></i></div><img class="mt-4 w-full h-40 object-cover rounded" src="https://images.unsplash.com/photo-1551281044-8a5d0d8d1f05?q=80&w=1200&auto=format&fit=crop" alt="chart" /></div>
+          <div class="card bg-white p-5"><div class="flex items-center justify-between"><h3 class="font-semibold">合同金额分布</h3><i class="fa-solid fa-chart-pie text-indigo-600"></i></div><img class="mt-4 w-full h-40 object-cover rounded" src="https://images.unsplash.com/photo-1551281044-8d8d1f0d5a90?q=80&w=1200&auto=format&fit=crop" alt="chart2" /></div>
+          <div class="card bg-white p-5"><div class="flex items-center justify-between"><h3 class="font-semibold">预案覆盖</h3><i class="fa-solid fa-shield-halved text-emerald-600"></i></div><img class="mt-4 w-full h-40 object-cover rounded" src="https://images.unsplash.com/photo-1530207611141-d7c4f63a0131?q=80&w=1200&auto=format&fit=crop" alt="chart3" /></div>
+        </section>
+        <section class="grid lg:grid-cols-2 gap-6">
+          <div class="card bg-white p-5">
+            <h3 class="font-semibold">重点合同</h3>
+            <ul class="mt-4 divide-y">
+              <li class="py-3 flex items-center justify-between"><div><div class="font-medium">应急物资采购框架协议</div><div class="text-sm text-gray-500">供应商：华安实业 · 金额：¥ 12,500,000</div></div><span class="px-2 py-1 text-xs rounded bg-blue-50 text-blue-700">在签</span></li>
+              <li class="py-3 flex items-center justify-between"><div><div class="font-medium">救援服务外包协议</div><div class="text-sm text-gray-500">供应商：安迅救援 · 金额：¥ 3,800,000</div></div><span class="px-2 py-1 text-xs rounded bg-yellow-50 text-yellow-700">法务审核</span></li>
+              <li class="py-3 flex items-center justify-between"><div><div class="font-medium">应急指挥平台运维合同</div><div class="text-sm text-gray-500">供应商：科创云 · 金额：¥ 1,200,000</div></div><span class="px-2 py-1 text-xs rounded bg-green-50 text-green-700">已生效</span></li>
+            </ul>
+          </div>
+          <div class="card bg-white p-5">
+            <h3 class="font-semibold">风险预警</h3>
+            <div class="mt-4 grid grid-cols-3 gap-4">
+              <div class="p-4 rounded bg-red-50 text-red-700"><div class="text-sm">逾期付款</div><div class="text-2xl font-semibold">5</div></div>
+              <div class="p-4 rounded bg-orange-50 text-orange-700"><div class="text-sm">合同到期</div><div class="text-2xl font-semibold">7</div></div>
+              <div class="p-4 rounded bg-yellow-50 text-yellow-700"><div class="text-sm">条款异常</div><div class="text-2xl font-semibold">3</div></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </section>
+
+    <!-- 合同列表 -->
+    <section id="contracts" class="screen bg-white">
+      <div class="section-title px-4 py-3 flex items-center gap-3"><i class="fa-solid fa-file-signature"></i><span>Contracts · 合同</span></div>
+      <div class="p-6">
+        <div class="card bg-white p-5">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold">合同列表</h3>
+            <div class="flex gap-2">
+              <input class="border rounded px-3 py-2 w-64" placeholder="搜索 合同名称/供应商/编号" />
+              <button class="btn-primary px-3 py-2 rounded"><i class="fa-solid fa-plus mr-2"></i>新建合同</button>
+            </div>
+          </div>
+          <table class="mt-4 min-w-full">
+            <thead>
+              <tr class="text-left text-sm text-gray-500">
+                <th class="py-2">合同名称</th>
+                <th class="py-2">供应商</th>
+                <th class="py-2">编号</th>
+                <th class="py-2">金额</th>
+                <th class="py-2">状态</th>
+                <th class="py-2">操作</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y">
+              <tr><td class="py-3">应急物资采购框架协议</td><td>华安实业</td><td>CT-2025-001</td><td>¥ 12,500,000</td><td><span class="px-2 py-1 text-xs rounded bg-blue-50 text-blue-700">在签</span></td><td><a class="text-blue-600 hover:underline" href="#contract-detail">查看</a></td></tr>
+              <tr><td class="py-3">救援服务外包协议</td><td>安迅救援</td><td>CT-2025-045</td><td>¥ 3,800,000</td><td><span class="px-2 py-1 text-xs rounded bg-yellow-50 text-yellow-700">法务审核</span></td><td><a class="text-blue-600 hover:underline" href="#contract-detail">查看</a></td></tr>
+              <tr><td class="py-3">应急指挥平台运维合同</td><td>科创云</td><td>CT-2025-078</td><td>¥ 1,200,000</td><td><span class="px-2 py-1 text-xs rounded bg-green-50 text-green-700">已生效</span></td><td><a class="text-blue-600 hover:underline" href="#contract-detail">查看</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 合同详情 -->
+    <section id="contract-detail" class="screen bg-white">
+      <div class="section-title px-4 py-3 flex items-center gap-3"><i class="fa-solid fa-file-circle-check"></i><span>Contract Detail · 合同详情</span></div>
+      <div class="p-6">
+        <div class="card bg-white p-6">
+          <div class="flex items-start justify-between">
+            <div>
+              <h2 class="text-xl font-semibold">应急物资采购框架协议</h2>
+              <div class="text-sm text-gray-500 mt-1">编号：CT-2025-001 · 供应商：华安实业</div>
+            </div>
+            <div class="flex gap-2">
+              <button class="px-3 py-2 rounded border">导出 PDF</button>
+              <button class="btn-primary px-3 py-2 rounded"><i class="fa-solid fa-paper-plane mr-2"></i>提交审批</button>
+            </div>
+          </div>
+          <div class="mt-6 grid lg:grid-cols-3 gap-6">
+            <div class="lg:col-span-2 space-y-6">
+              <div class="p-4 rounded border">
+                <div class="text-sm text-gray-500 mb-2">关键条款</div>
+                <ul class="list-disc ml-5 space-y-2 text-gray-700">
+                  <li>交付周期：应急通知后 24 小时内到货。</li>
+                  <li>质量要求：满足国家应急标准与行业规范。</li>
+                  <li>违约责任：按未履行金额 20% 赔偿。</li>
+                </ul>
+              </div>
+              <div class="p-4 rounded border">
+                <div class="text-sm text-gray-500 mb-2">附件</div>
+                <ul class="space-y-2">
+                  <li class="flex items-center justify-between"><div class="flex items-center gap-2"><i class="fa-regular fa-file-pdf text-red-500"></i> 技术规范-V3.pdf</div><a class="text-blue-600" href="#">下载</a></li>
+                  <li class="flex items-center justify-between"><div class="flex items-center gap-2"><i class="fa-regular fa-file-lines text-gray-600"></i> 供应商资质.zip</div><a class="text-blue-600" href="#">下载</a></li>
+                </ul>
+              </div>
+            </div>
+            <aside class="space-y-6">
+              <div class="p-4 rounded border"><div class="text-sm text-gray-500 mb-2">金额与状态</div><div class="text-2xl font-semibold">¥ 12,500,000</div><div class="mt-1"><span class="px-2 py-1 text-xs rounded bg-blue-50 text-blue-700">在签</span></div></div>
+              <div class="p-4 rounded border"><div class="text-sm text-gray-500 mb-3">审批流程</div><ol class="space-y-3"><li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-600"></i> 业务提交</li><li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-600"></i> 财务初审</li><li class="flex items-center gap-2"><i class="fa-solid fa-hourglass-half text-yellow-600"></i> 法务审核</li><li class="flex items-center gap-2"><i class="fa-regular fa-circle text-gray-400"></i> 管理者签署</li></ol></div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 门户：财务/法务/业务/管理者 -->
+    <section class="screen bg-white">
+      <div class="section-title px-4 py-3 flex items-center gap-3"><i class="fa-solid fa-coins"></i><span>Finance Portal · 财务门户</span></div>
+      <main class="p-6 space-y-6">
+        <section class="grid lg:grid-cols-3 gap-6">
+          <div class="card bg-white p-5"><div class="text-sm text-gray-500">待支付</div><div class="text-2xl font-semibold">¥ 5,430,000</div></div>
+          <div class="card bg-white p-5"><div class="text-sm text-gray-500">本月已支付</div><div class="text-2xl font-semibold">¥ 9,120,000</div></div>
+          <div class="card bg-white p-5"><div class="text-sm text-gray-500">预算执行率</div><div class="text-2xl font-semibold">78%</div></div>
+        </section>
+        <section class="card bg-white p-5">
+          <div class="flex items-center justify-between"><h3 class="font-semibold">付款申请</h3><button class="btn-primary px-3 py-2 rounded">发起付款</button></div>
+          <table class="mt-4 min-w-full"><thead><tr class="text-left text-sm text-gray-500"><th class="py-2">合同</th><th class="py-2">供应商</th><th class="py-2">金额</th><th class="py-2">状态</th><th class="py-2">操作</th></tr></thead><tbody class="divide-y"><tr><td class="py-3">应急物资采购框架协议</td><td>华安实业</td><td>¥ 2,000,000</td><td><span class="px-2 py-1 text-xs rounded bg-yellow-50 text-yellow-700">待支付</span></td><td><a class="text-blue-600" href="#">审批流</a></td></tr><tr><td class="py-3">救援服务外包协议</td><td>安迅救援</td><td>¥ 1,300,000</td><td><span class="px-2 py-1 text-xs rounded bg-blue-50 text-blue-700">在审</span></td><td><a class="text-blue-600" href="#">查看</a></td></tr></tbody></table>
+        </section>
+      </main>
+    </section>
+
+    <section class="screen bg-white">
+      <div class="section-title px-4 py-3 flex items-center gap-3"><i class="fa-solid fa-scale-balanced"></i><span>Legal Portal · 法务门户</span></div>
+      <main class="p-6 space-y-6">
+        <section class="grid lg:grid-cols-3 gap-6">
+          <div class="card bg-white p-5"><div class="text-sm text-gray-500">待审合同</div><div class="text-2xl font-semibold">8</div></div>
+          <div class="card bg-white p-5"><div class="text-sm text-gray-500">已出具意见</div><div class="text-2xl font-semibold">21</div></div>
+          <div class="card bg-white p-5"><div class="text-sm text-gray-500">风险提示</div><div class="text-2xl font-semibold">3</div></div>
+        </section>
+        <section class="card bg-white p-5">
+          <h3 class="font-semibold">审核工作台</h3>
+          <ul class="mt-4 divide-y">
+            <li class="py-3 flex items-center justify-between"><div><div class="font-medium">救援服务外包协议</div><div class="text-sm text-gray-500">重点关注：赔偿条款、不可抗力</div></div><div class="flex gap-2"><button class="px-3 py-1 rounded border">退回修改</button><button class="btn-primary px-3 py-1 rounded">通过</button></div></li>
+            <li class="py-3 flex items-center justify-between"><div><div class="font-medium">物资采购框架协议补充</div><div class="text-sm text-gray-500">重点关注：价格调整、交付 SLA</div></div><div class="flex gap-2"><button class="px-3 py-1 rounded border">退回修改</button><button class="btn-primary px-3 py-1 rounded">通过</button></div></li>
+          </ul>
+        </section>
+      </main>
+    </section>
+
+    <section class="screen bg-white">
+      <div class="section-title px-4 py-3 flex items-center gap-3"><i class="fa-solid fa-briefcase"></i><span>Business Portal · 业务门户</span></div>
+      <main class="p-6 space-y-6">
+        <section class="grid lg:grid-cols-3 gap-6">
+          <div class="card bg-white p-5"><div class="text-sm text-gray-500">我的待办</div><div class="text-2xl font-semibold">12</div></div>
+          <div class="card bg-white p-5"><div class="text-sm text-gray-500">本月发起</div><div class="text-2xl font-semibold">9</div></div>
+          <div class="card bg-white p-5"><div class="text-sm text-gray-500">平均审批时长</div><div class="text-2xl font-semibold">1.8 天</div></div>
+        </section>
+        <section class="card bg-white p-5">
+          <div class="flex items-center justify-between"><h3 class="font-semibold">快速发起</h3><div class="flex gap-2"><button class="btn-primary px-3 py-2 rounded">新建合同</button><button class="px-3 py-2 rounded border">物资申请</button></div></div>
+          <div class="mt-4 grid md:grid-cols-3 gap-4">
+            <a class="p-4 rounded border hover:shadow" href="#contracts"><div class="font-medium">采购合同</div><div class="text-sm text-gray-500">标准模板 · 风险检查</div></a>
+            <div class="p-4 rounded border"><div class="font-medium">应急服务合同</div><div class="text-sm text-gray-500">含服务等级协议（SLA）</div></div>
+            <div class="p-4 rounded border"><div class="font-medium">框架协议</div><div class="text-sm text-gray-500">长周期与分批交付</div></div>
+          </div>
+        </section>
+      </main>
+    </section>
+
+    <section class="screen bg-white">
+      <div class="section-title px-4 py-3 flex items-center gap-3"><i class="fa-solid fa-user-tie"></i><span>Admin Portal · 管理者门户</span></div>
+      <main class="p-6 space-y-6">
+        <section class="grid lg:grid-cols-4 gap-6">
+          <div class="card bg-white p-5"><div class="text-sm text-gray-500">本月签约额</div><div class="text-2xl font-semibold">¥ 18,420,000</div></div>
+          <div class="card bg-white p-5"><div class="text-sm text-gray-500">本月支出</div><div class="text-2xl font-semibold">¥ 9,780,000</div></div>
+          <div class="card bg-white p-5"><div class="text-sm text-gray-500">合规评分</div><div class="text-2xl font-semibold">92</div></div>
+          <div class="card bg-white p-5"><div class="text-sm text-gray-500">重大风险</div><div class="text-2xl font-semibold">2</div></div>
+        </section>
+        <section class="grid lg:grid-cols-2 gap-6">
+          <div class="card bg-white p-5"><h3 class="font-semibold">部门绩效对比</h3><img class="mt-4 w-full h-48 object-cover rounded" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop" alt="comparison" /></div>
+          <div class="card bg-white p-5"><h3 class="font-semibold">关键告警</h3><ul class="mt-4 space-y-3"><li class="p-3 rounded bg-red-50 text-red-700">两项合同已逾期未回签</li><li class="p-3 rounded bg-yellow-50 text-yellow-700">一项采购存在价格异常</li><li class="p-3 rounded bg-blue-50 text-blue-700">预算执行低于 80%</li></ul></div>
+        </section>
+      </main>
+    </section>
+
+    <!-- 登录 -->
+    <section class="screen bg-white">
+      <div class="section-title px-4 py-3 flex items-center gap-3"><i class="fa-solid fa-right-to-bracket"></i><span>Login · 登录</span></div>
+      <main class="p-6 grid place-items-center">
+        <div class="w-full max-w-md card bg-white p-8">
+          <div class="flex items-center gap-3 text-gray-800"><i class="fa-solid fa-shield-halved text-xl text-blue-600"></i><div class="text-lg font-semibold">应急管理系统 登录</div></div>
+          <div class="mt-6 space-y-4">
+            <div><label class="text-sm text-gray-500">邮箱</label><input class="w-full border rounded px-3 py-2" placeholder="name@example.com" /></div>
+            <div><label class="text-sm text-gray-500">密码</label><input type="password" class="w-full border rounded px-3 py-2" placeholder="••••••••" /></div>
+            <div class="flex items-center justify-between text-sm"><label class="flex items-center gap-2"><input type="checkbox" checked /> 记住我</label><a class="text-blue-600" href="#">忘记密码？</a></div>
+            <button class="btn-primary w-full py-2 rounded">登录</button>
+          </div>
+          <img class="mt-6 w-full h-40 object-cover rounded" src="https://images.unsplash.com/photo-1497493292307-31c376b6e479?q=80&w=1200&auto=format&fit=crop" alt="city" />
+        </div>
+      </main>
+    </section>
+
+  </div>
+</body>
+</html>
